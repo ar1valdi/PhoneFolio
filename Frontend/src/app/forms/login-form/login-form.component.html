@@ -1,0 +1,16 @@
+<h1>Login</h1>
+<app-form-error [error]="this.error"></app-form-error>
+
+<form [formGroup]="loginForm" (submit)="onSubmitForm()" class="formLayout">
+    <span class="formPosition">
+        <label for="username">Name</label>
+        <input id="username" type="text" formControlName="username" />
+    </span>
+
+    <span class="formPosition">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+    </span>
+
+    <button type="submit" class="primary">Login</button>
+</form>

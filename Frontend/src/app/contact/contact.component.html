@@ -1,0 +1,11 @@
+<div class="contact">
+    <div class="data">
+        <span class="name">{{contactData.surname}} {{contactData.name}}</span>
+        <span class="email">{{contactData.email}}</span>
+    </div>
+    <div class="options">
+        <div class="option"><a [routerLink]="['/contact', contactData.id]">👁️</a></div>
+        <div *ngIf="authService.isLoggedNoFetch()" class="option"><a [routerLink]="['/contact/edit', contactData.id]">🖊️</a></div>
+        <div *ngIf="authService.isLoggedNoFetch()" class="option" (click)="onContactDelete()">🗑️</div>
+    </div>
+</div>

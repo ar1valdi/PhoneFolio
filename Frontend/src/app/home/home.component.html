@@ -1,0 +1,12 @@
+<section class="contacts">
+    <span *ngIf="this.dataLoaded">
+        <div *ngIf="contactList.length == 0" class="noContacts"><p>No contacts 😢</p></div>
+        <app-contact *ngFor="let contactData of contactList"
+        [contactData]="contactData" (contactDeleted)="fetchContactList()"></app-contact>
+    </span>
+    <a [routerLink]="['contacts/new']" *ngIf="authService.isLoggedNoFetch()">
+        <div class="addContact">
+            <span>+</span>
+        </div>
+    </a> 
+</section>

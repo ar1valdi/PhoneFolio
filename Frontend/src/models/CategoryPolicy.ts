@@ -1,0 +1,5 @@
+export enum CategoryPolicy {
+    ALLOW_SUBCATEGORIES = 0,
+    BLOCK_SUBCATEGORIES,
+    CUSTOM_SUBCATEGORIES
+}

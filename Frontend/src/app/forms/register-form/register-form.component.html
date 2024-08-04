@@ -1,0 +1,21 @@
+<h1>Join PhoneFolio community!</h1>
+<app-form-error [error]="this.error"></app-form-error>
+
+<form [formGroup]="registerForm" (submit)="onSubmitForm()" class="formLayout">
+    <span class="formPosition">
+        <label for="username">Name</label>
+        <input id="username" type="text" formControlName="username" />
+    </span>
+
+    <span class="formPosition">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+    </span>
+
+    <span class="formPosition">
+        <label for="confirmPassword">Repeat password</label>
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" />
+    </span>
+
+    <button type="submit" class="primary">Register</button>
+</form>

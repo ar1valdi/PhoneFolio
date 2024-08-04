@@ -1,0 +1,36 @@
+<span class="formLayout">
+    <span class="formPosition">
+        <label for="category">Category</label>
+        <select id="category" 
+        [(ngModel)]="selectedCategory.name" 
+        (ngModelChange)="onCategoryChange()">
+          <option *ngFor="let category of possibleCategories" [value]="category.name">
+            {{ category.name }}
+          </option>
+        </select>
+      </span>
+      
+    <span
+    *ngIf="this.dictionaryService.hasSubcategoriesAllowed(this.selectedCategory)">
+
+        <span class="formPosition" 
+        *ngIf="!this.dictionaryService.hasCustomSubcategoriesAllowed(this.selectedCategory); else custom">
+            <label for="subcategory">Subcategory</label>
+            <select id="subcategory" [(ngModel)]="selectedSubcategory.name">
+                <option *ngFor="let subcategory of possibleSubcategories" [value]="subcategory.name">
+                    {{ subcategory.name }}
+                </option>
+            </select>
+        </span>
+
+        <ng-template #custom>
+          <span class="formPosition">
+              <label for="subcategory">Subcategory</label>
+              <input id="subcategory" [(ngModel)]="selectedSubcategory.name">
+          </span>
+        </ng-template>
+
+    </span>
+
+    
+  </span>

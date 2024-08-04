@@ -1,0 +1,33 @@
+
+<main>
+  <header>
+    <a [routerLink]="['/']" id="title">
+      <p>PhoneFolio 🌱</p>
+    </a>
+    <div id="userMenu" *ngIf="isLogged; else notLogged">
+      <span class="userMenuPosition">
+        <div>{{this.username}}</div>
+      </span>
+        <a (click)="onLogoutClicked()" class="userMenuPosition">
+          <div class="userSectionText">Logout</div>
+        </a>
+    </div>
+
+    <ng-template #notLogged>
+      <div id="userMenu">
+        <a [routerLink]="['register']" class="userMenuPosition">
+          <div class="userSectionText">Register</div>
+        </a>
+        <a [routerLink]="['login']" class="userMenuPosition">
+          <div class="userSectionText">Login</div>
+        </a>
+      </div>
+    </ng-template>
+
+  </header>
+  <div id="container">
+    <section id="content">
+      <router-outlet></router-outlet>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,38 @@
+<h1>Add new contact</h1>
+<app-form-error [error]="this.error"></app-form-error>
+
+<form [formGroup]="contactForm" (submit)="onSubmitForm()" class="formLayout">
+    <span class="formPosition">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" />
+    </span>
+
+    <span class="formPosition">
+        <label for="surname">Surname</label>
+        <input id="surname" type="text" formControlName="surname" />
+    </span>
+
+    <app-category-picker></app-category-picker>
+
+    <span class="formPosition">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" />
+    </span>
+
+    <span class="formPosition">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+    </span>
+
+    <span class="formPosition">
+        <label for="phoneNumber">Phone Number</label>
+        <input id="phoneNumber" type="text" formControlName="phoneNumber" />
+    </span>
+
+    <span class="formPosition">
+        <label for="birthDate">Birth Date</label>
+        <input id="birthDate" type="date" formControlName="birthDate" />
+    </span>
+
+    <button type="submit" class="primary">Add contact</button>
+</form>

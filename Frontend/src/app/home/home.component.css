@@ -1,0 +1,42 @@
+.addContact {
+    background-color: #787878;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1000px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.addContact > span {
+    color: white;
+    font-size: 40px;
+    position: relative;
+    bottom: 2px;
+}
+
+.addContact:hover {
+    background-color: #606060;
+}
+
+.noContacts {
+    background-color: white;
+    border: 3px solid rgb(30,30,30);
+    border-radius: 15px;
+    width: 100%;
+    min-height: 70px;
+    margin: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+    font-size: 18px;
+}
+
+.contacts {
+    padding-bottom: 150px;
+}

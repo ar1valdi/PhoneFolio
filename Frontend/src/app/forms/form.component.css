@@ -1,0 +1,33 @@
+.formLayout {
+    display:flex;
+    flex-direction: column;
+}
+
+.formPosition {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    height: 50px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 30px 5px 20px 5px;
+    background-color: #303030;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #101010;
+}
+
+.formPosition select,
+.formPosition input {
+    height: 30px;
+    font-size: 15px;
+    border: 1px solid black;
+    border-radius: 7px;
+}

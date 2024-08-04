@@ -1,0 +1,13 @@
+<div *ngIf="error">
+    <h1>Error occured: {{this.error.code}}</h1>
+    <h3>{{this.error.title}}</h3>
+
+    <div *ngIf="error.errors && moreErrorsKeys.length > 0">
+        <ul>
+            <li *ngFor="let key of moreErrorsKeys">
+                <strong>{{key}}:</strong>
+                {{this.error.errors[key]}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf="dataLoaded">
+    <h1>{{contactData.name}} {{contactData.surname}}</h1>
+    <p class="categories">{{contactData.category}}<span *ngIf="contactData.subcategory">, {{contactData.subcategory}}</span></p>
+
+    <br/>
+    <p>📧 {{contactData.email}}</p>
+    <p>📞 {{contactData.phoneNumber}}</p>
+    <br/>
+
+    <p>🔓 {{contactData.password}}</p>
+    <p>🎂 {{birthDateString}}</p>
+
+    <br/>
+    <p class="createdBy">Contact created by: {{contactData.username}}</p>
+    <p class="id">ID: {{contactData.id}}</p>
+</div>

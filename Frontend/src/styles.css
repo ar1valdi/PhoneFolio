@@ -1,0 +1,10 @@
+body {
+    background-color: white;
+    font-family: Verdana;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
