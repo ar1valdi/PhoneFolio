@@ -8,4 +8,4 @@ services:
       MYSQL_ROOT_PASSWORD: r00t
       MYSQL_DATABASE: PhoneFolio
     volumes:
-      - ./Database:/var/lib/MySql
+      - ./Database:/var/lib/mysql
